@@ -63,7 +63,6 @@ class AgentDQN(Agent):
             
     def initialize_episode(self):
         """ Initialize a new episode. This function is called every time a new episode is run. """
-        
         self.current_slot_id = 0
         self.phase = 0
         self.request_set = ['moviename', 'starttime', 'city', 'date', 'theater', 'numberofpeople']

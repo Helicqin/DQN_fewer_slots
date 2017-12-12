@@ -1,4 +1,4 @@
-# -*- coding:utf8 -*-
+
 def action_index(act_slot_response):
     """ Return the index of action """
     feasible_actions = [
