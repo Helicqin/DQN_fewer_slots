@@ -22,7 +22,7 @@ sys_request_slots = ["child_age", "client_location", "reserve_location", "phone_
 sys_inform_slots = ['teacher_nation', 'fee']
 ```
 
-## Current Flexsible Actions
+## Current Feasible Actions
 ```python
 feasible_actions = [{'diaact': 'greeting', 'inform_slots': {}, 'request_slots': {}},
                     {'diaact': 'bye', 'inform_slots': {}, 'request_slots': {}},
