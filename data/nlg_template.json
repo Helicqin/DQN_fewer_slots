@@ -1,0 +1,187 @@
+{
+  "request": [
+      {
+        "request_slots": ["child_name"],
+        "nl": {"agt": "好的，请问咱们小朋友怎么称呼呢？明天过来我让老师多关注一些，跟孩子多做一些互动", "usr": ""},
+        "inform_slots": []
+      },
+      {
+        "request_slots": ["child_name"],
+        "nl": {"agt": "具体费用也要结合孩子的实际情况，请问咱们小朋友怎么称呼呢？我让老师多关注一些，跟孩子多做一些互动", "usr": ""},
+        "inform_slots": ["fee"]
+      },
+      {
+        "request_slots": ["child_name"],
+        "nl": {"agt": "我们的老师以中教为主，在全英文的环境下进行学习，请问咱们小朋友怎么称呼呢？我让老师多关注一些，跟孩子多做一些互动", "usr": ""},
+        "inform_slots": ["teacher_nation"]
+      },
+      {
+        "request_slots": ["child_name"],
+        "nl": {"agt": "我们的网络课程是针对上初中有一定的口语基础能用英语进行简单交流的孩子的，请问咱们小朋友怎么称呼呢？", "usr": ""},
+        "inform_slots": ["online_course"]
+      },
+      {
+        "request_slots": ["phone_number"],
+        "nl": {"agt": "好的呢 请问您的联系方式是多少呢？", "usr": ""},
+        "inform_slots": []
+      },
+      {
+        "request_slots": ["phone_number"],
+        "nl": {"agt": "好的呢 请问您的联系方式是多少呢？我安排$reserve_location$老师给您回电帮您安排", "usr": ""},
+        "inform_slots": ["reserve_location"]
+      },
+      {
+        "request_slots": ["phone_number"],
+        "nl": {"agt": "不同阶段、班型的费用也是不同的，请问您的联系方式是多少呢？我安排专业的课程老师给您回电帮您安排", "usr": ""},
+        "inform_slots": ["fee"]
+      },
+      {
+        "request_slots": ["phone_number"],
+        "nl": {"agt": "我们的老师中外教都有的，以中教为主，您看您的联系方式是多少呢？我让我们的课程老师联系您给您详细介绍一下吧。", "usr": ""},
+        "inform_slots": ["teacher_nation"]
+      },
+      {
+        "request_slots": ["phone_number"],
+        "nl": {"agt": "我们的在线一对一网络课程是针对有一定基础能用英语进行简单交流的孩子的，您看您的联系方式是多少呢？我让我们的课程老师联系您给您详细介绍一下吧。", "usr": ""},
+        "inform_slots": ["online_course"]
+      },
+      {
+        "request_slots": ["client_gender"],
+        "nl": {"agt": "请问您是孩子的爸爸还是妈妈呢？", "usr": ""},
+        "inform_slots": []
+      },
+      {
+        "request_slots": ["client_gender"],
+        "nl": {"agt": "请问您是孩子的爸爸还是妈妈呢？", "usr": ""},
+        "inform_slots": [""]
+      },
+      {
+        "request_slots": ["client_gender"],
+        "nl": {"agt": "不同阶段、班型的费用也是不同的，请问您是孩子的爸爸还是妈妈呢？", "usr": ""},
+        "inform_slots": ["fee"]
+      },
+	  {
+        "request_slots": ["child_age"],
+        "nl": {"agt": "恩，请问您是给几岁的孩子咨询瑞思的课程呢？", "usr": ""},
+        "inform_slots": []
+      },
+      {
+        "request_slots": ["child_age"],
+        "nl": {"agt": "不同阶段、班型的费用也是不同的，请问咱们宝贝几岁了呢？", "usr": ""},
+        "inform_slots": ["fee"]
+      },
+      {
+        "request_slots": ["English_level"],
+        "nl": {"agt": "孩子的英语基础怎么样呢？有上过辅导班吗？", "usr": ""},
+        "inform_slots": []
+      },
+      {
+        "request_slots": ["english_level"],
+        "nl": {"agt": "具体费用还要结合孩子的实际情况，孩子的英语基础怎么样呢？有上过辅导班吗？", "usr": ""},
+        "inform_slots": ["fee"]
+      },
+      {
+        "request_slots": ["english_level"],
+        "nl": {"agt":"您好，在线一对一外教课程是针对上初中有一定口语基础可以和外教进行简单沟通交流的小朋友的。小朋友建议您给孩子报面授课程进行学习，请问小朋友现在有简单的接触过一点英语了吗？", "usr":""},
+        "inform_slots": ["online_course"]
+      },
+      {
+        "request_slots": ["client_location"],
+        "nl": {"agt": "好的，请问您是哪座城市，具体什么在哪个区呐？", "usr": ""},
+        "inform_slots": []
+      },
+      {
+        "request_slots": ["client_location"],
+        "nl": {"agt": "具体费用还要结合实际情况，请问您是在哪个城市呢？我给您看一下就近的校区", "usr": ""},
+        "inform_slots": ["fee"]
+      },
+	  {
+        "request_slots": ["client_name"],
+        "nl": {"agt": "好的 请问怎么称呼您呢？", "usr": ""},
+        "inform_slots": []
+      },
+      {
+        "request_slots": ["client_name"],
+        "nl": {"agt": "课程费用还要结合课程的实际情况，请问怎么称呼您呢？", "usr": ""},
+        "inform_slots": ["fee"]
+      },
+      {
+        "request_slots": ["child_grade"],
+        "nl": {"agt": "请问小朋友现在上几年级？", "usr": ""},
+        "inform_slots": []
+      },
+      {
+        "request_slots": ["child_grade"],
+        "nl": {"agt": "课程的费用还要结合孩子的实际情况，请问小朋友现在上几年级？", "usr": ""},
+        "inform_slots": ["fee"]
+      },
+	  {
+        "request_slots": ["fee"],
+        "nl": {"agt": "", "usr": "学费多少？"},
+        "inform_slots": []
+      },
+      {
+        "request_slots": ["teacher_nation"],
+        "nl": {"agt": "", "usr": "是外教上课吗?"},
+        "inform_slots": []
+      }, 
+	  {
+        "request_slots": ["online_course"],
+        "nl": {"agt": "", "usr": "在线课程的课时和收费情况是什么样的？"},
+        "inform_slots": []
+      },
+	  {
+        "request_slots": ["phone_number"],
+        "nl": {"agt": "不同的阶段和班型对应的课时是不一样的，您留下联系方式，我安排校区的专业课程老师结合小朋友的情况为您详细的介绍一下，您看可以吗？", "usr":""},
+        "inform_slots": ["class_type"]
+      },
+	  {
+        "request_slots": ["english_level"],
+        "nl": {"agt": "您好，不同阶段、班型费用是不同的，请问小朋友现在有简单的接触过一点英语了吗？", "usr": ""},
+        "inform_slots": ["fee"]
+      },
+	  {
+        "request_slots": ["phone_number"],
+        "nl": {"agt": "好的，您看怎么联系您呢？具体的开班时间和名额以及费用老师会详询为您介绍的.", "usr":""},
+        "inform_slots": ["fee"]
+      },
+	  {
+        "request_slots": ["class_type"],
+        "nl": {"agt": "", "usr": "有什么样的班型？"},
+        "inform_slots": ["fee"]
+      }, 
+	  {
+        "request_slots": ["reserve_location"],
+        "nl": {"agt": "您所在的地区的有$school_location$,您想具体想预订哪个校区？", "usr": ""},
+        "inform_slots": ["school_location"]
+      },
+	  {
+        "request_slots": ["phone_number"],
+        "nl": {"agt": "因为在现实一对一外教的课程，需要有一定的英语基础，请问您的联系方式是多少呢？我可以先让校区老师帮您介绍一下咱们的面授课程，您先做个了解，也做个对比参考", "usr":""},
+        "inform_slots": ["online_course"]
+      },
+      {
+        "request_slots": ["reserve_time"],
+        "nl": {"agt": "您想预约什么时间来试听，我这边给您安排？", "usr": ""},
+        "inform_slots": []
+      }
+    ], 
+	
+  "inform":[
+      {
+        "request_slots": [],
+        "nl": {"agt": "不同的阶段和班型对应的课时是不一样的，我安排校区的专业课程老师结合小朋友的情况为您详细的介绍一下，您看可以吗？", "usr":""},
+        "inform_slots": ["fee"]
+      },
+	  {
+        "request_slots": [],
+        "nl": {"agt": "瑞思中外教老师都是有的，在全英文的环境下学习，除了培养兴趣以外，主要是锻炼孩子的整句输出能力，刚好瑞思有适合孩子的体验课，您可以带着孩子过来感受一下，您看可以吗？", "usr":""},
+        "inform_slots": ["teacher_nation"]
+      },
+      {
+        "request_slots": [],
+        "nl": {"agt": "针对13-18岁咱们是线上的课程", "usr":""},
+        "inform_slots": ["online_course"]
+      }
+  ]
+}
