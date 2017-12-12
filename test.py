@@ -1,5 +1,3 @@
-#!/usr/bin/python
-# -*- coding:utf8 -*-
 # Created by Helic on 2017/7/27
 
 import argparse
@@ -71,5 +69,21 @@ import json
 #             pass
 # print(feasible_actions)
 
-with open("data/result.json", 'r', encoding='utf-8') as f:
-    value = json.load(f)
+
+feasible_actions = [
+    {'diaact': "greeting", 'inform_slots': {}, 'request_slots': {}},
+    {'diaact': "bye", 'inform_slots': {}, 'request_slots': {}}
+]
+sys_request_slots = ["child_age", "client_location", "reserve_location", "phone_number",
+                     "client_name", "client_gender", "reserve_time", "user_goal"]
+sys_inform_slots = ['teacher_nation', 'fee']
+for slot in sys_request_slots:
+    feasible_actions.append({'diaact': "request", "request_slots": {slot: "UNK"}, "inform_slots": {}})
+for slot in sys_inform_slots:
+    feasible_actions.append({'diaact': "inform", "request_slots": {}, "inform_slots": {slot: "PLACEHOLDER"}})
+
+for i in sys_request_slots:
+    for j in sys_inform_slots:
+        feasible_actions.append({'diaact': "request", "request_slots": {i: "UNK"}, "inform_slots": {j: "PLACEHOLDER"}})
+
+print(feasible_actions, '\n', len(feasible_actions))

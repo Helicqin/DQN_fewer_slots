@@ -5,11 +5,9 @@ import json
 
 class UserSimulator:
     def __init__(self, request_count):
-        self.user_inform_slots = ["child_age", "english_level", "client_location", "reserve_location", "phone_number",
-                                  "client_name", "client_gender", "know_about_ruisi", "special_need", "reserve_time",
-                                  "child_grade", "user_goal"]
-        self.user_request_slots = ['school_location', 'attend_class_alone', 'allow_parents_together', 'class_length',
-                                   'textbook', 'class_size', 'teacher_nation', 'class_type', 'online_course', 'fee']
+        self.user_inform_slots = ["child_age", "client_location", "reserve_location", "phone_number",
+                                  "client_name", "client_gender", "reserve_time", "user_goal"]
+        self.user_request_slots = ['teacher_nation', 'fee']
         self.agent_request_slot = ""
         self.dict_inform = {
                "user_goal": ["加盟", "预约", "咨询"],
@@ -37,11 +35,11 @@ class UserSimulator:
                 user_current_inform_slot[i] = random.choice(self.dict_inform[i])  # user 对于agent的问题做出的回答
 
             prob = random.random()
-            if prob > 0.5:
+            if prob > 0.3:
                 # 用户只回答agent问题
                 user_diaact = {"diaact": "inform", "request_slots": {}, "inform_slots":
                 {list(user_current_inform_slot.keys())[0]: list(user_current_inform_slot.values())[0]}}
-            elif 0.1 < prob < 0.5:
+            elif 0.1 < prob < 0.3:
                 # 问and答
                 if self.goal != []:
                     user_current_request_slot = random.choice(self.goal)  # user要问的问题
@@ -86,7 +84,7 @@ dialog = {}
 dialog_num = 1000
 for i in range(dialog_num):
     dm = DM()
-    user = UserSimulator(random.randint(1, 5))
+    user = UserSimulator(random.randint(0, 3))
     print("goal:", user.goal)
     user_diaact = {"diaact": "inform", "request_slots": {}, "inform_slots": {"user_goal": "预约"}}
     while True:
