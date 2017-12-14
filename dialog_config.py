@@ -137,10 +137,11 @@ slot_set = {
     "child_age": 2,
     "english_level": 3,
     "client_location": 4,
-    "reserve_location": 5,  # remove select, simply select a school
+    "reserve_location": 5,
     "reserve_time": 6,
     "phone_number": 7,
     "user_goal": 8,
     "fee": 9,
     "teacher_nation": 10
 }
+

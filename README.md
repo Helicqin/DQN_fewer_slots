@@ -72,3 +72,11 @@ feasible_actions = [{'diaact': 'greeting', 'inform_slots': {}, 'request_slots': 
                      'inform_slots': {'reserve_location': 'PLACEHOLDER'}}
                      ]
 ```
+
+## Generate Simulated Dialogues
+
+* clone this repository
+
+* install all the dependencies
+
+* python user_simulator.py(set dialog_num for your need)
