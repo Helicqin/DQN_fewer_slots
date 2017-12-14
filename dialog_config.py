@@ -128,7 +128,7 @@ feasible_actions = [{'diaact': 'greeting', 'inform_slots': {}, 'request_slots': 
                     {'diaact': 'request', 'request_slots': {'user_goal': 'UNK'},
                      'inform_slots': {'fee': 'PLACEHOLDER'}}]          # 28
 
-act_set = {'request': 0, 'inform': 1, "bye": 2, "greeting": 3}
+act_set = {'request': 0, 'inform': 1, "bye": 2, "greeting": 3, "select": 4}
 slot_set = {
     "client_name": 0,
     "client_gender": 1,

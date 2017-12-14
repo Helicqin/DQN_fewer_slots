@@ -1,10 +1,11 @@
 import random
 import json
-# from DialogManager.DialogManager import DM
+from DialogManager.DialogManager import DM
 
 
 class UserSimulator:
     def __init__(self, request_count):
+        """request_count <= the number of user_request_slots"""
         self.user_inform_slots = ["child_age", "client_location", "reserve_location", "phone_number",
                                   "client_name", "client_gender", "reserve_time", "user_goal"]
         self.user_request_slots = ['teacher_nation', 'fee']
@@ -79,12 +80,13 @@ class UserSimulator:
         else:
             diaact["speaker"] = "agent"
         self.dialog.append(diaact)
-'''
+
+
 dialog = {}
-dialog_num = 1000
+dialog_num = 5000
 for i in range(dialog_num):
     dm = DM()
-    user = UserSimulator(random.randint(0, 3))
+    user = UserSimulator(random.randint(0, 2))
     print("goal:", user.goal)
     user_diaact = {"diaact": "inform", "request_slots": {}, "inform_slots": {"user_goal": "预约"}}
     while True:
@@ -101,9 +103,9 @@ for i in range(dialog_num):
     print("dialog {}:".format(i), user.dialog)
     dialog[str(i)] = user.dialog
 
-with open("simulated_dialog.json", 'w', encoding='utf-8') as f:
+with open("simulated_dialog_5000.json", 'w', encoding='utf-8') as f:
     json.dump(dialog, f, ensure_ascii=False)
-'''
+
 
 
 

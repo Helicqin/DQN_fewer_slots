@@ -2,14 +2,14 @@
 
 ## Current Slots and Acts
 ```python
-act_set = {'request': 0, 'inform': 1, "bye": 2, "greeting": 3}
+act_set = {'request': 0, 'inform': 1, "bye": 2, "greeting": 3, "select": 4}
 slot_set = {
     "client_name": 0,
     "client_gender": 1,
     "child_age": 2,
     "english_level": 3,
     "client_location": 4,
-    "reserve_location": 5,  # remove select, simply select a school
+    "reserve_location": 5,  
     "reserve_time": 6,
     "phone_number": 7,
     "user_goal": 8,
