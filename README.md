@@ -67,5 +67,7 @@ feasible_actions = [{'diaact': 'greeting', 'inform_slots': {}, 'request_slots': 
                     {'diaact': 'request', 'request_slots': {'user_goal': 'UNK'},
                      'inform_slots': {'teacher_nation': 'PLACEHOLDER'}},
                     {'diaact': 'request', 'request_slots': {'user_goal': 'UNK'},
-                     'inform_slots': {'fee': 'PLACEHOLDER'}}]
+                     'inform_slots': {'fee': 'PLACEHOLDER'}},
+                     {'diaact': 'select', 'request_slots': {'reserve_location': 'UNK'},
+                     'inform_slots': {'reserve_location': 'PLACEHOLDER'}}]
 ```
