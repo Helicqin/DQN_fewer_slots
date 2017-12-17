@@ -80,3 +80,6 @@ feasible_actions = [{'diaact': 'greeting', 'inform_slots': {}, 'request_slots': 
 * install all the dependencies
 
 * python user_simulator.py(set dialog_num for your need)
+
+
+*Note : 由5000个模拟对话转化出的五元组文件http://note.youdao.com/groupshare/?token=4E7B5D8489E64DA195C00043160BDD5A&gid=31258470*

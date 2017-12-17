@@ -13,7 +13,7 @@ params = {
 
 agent_dqn = AgentDQN(params=params)          # 初始化参数需要改
 agent_dqn.register_experience_replay_tuple_from_file('data/result.json')  # 填充经验池
-agent_dqn.train(batch_size=512, num_batch=10)
+agent_dqn.train(batch_size=512, num_batch=10000)
 agent_dqn.save_model('data/saved_model.p')
 
 
