@@ -87,3 +87,12 @@ for i in sys_request_slots:
         feasible_actions.append({'diaact': "request", "request_slots": {i: "UNK"}, "inform_slots": {j: "PLACEHOLDER"}})
 
 print(feasible_actions, '\n', len(feasible_actions))
+
+with open("data/result.json", 'r', encoding="utf-8") as f:
+    value = json.load(f)
+    for i in value:
+        user_action = value[i][0]["user_action"]
+        for slot in user_action['inform_slots'].keys():
+            if slot == "special_need":
+                print(i, value[i])
+                exit()
