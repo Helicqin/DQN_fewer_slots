@@ -1,7 +1,8 @@
 # 根据excel处理结果获取每句话的state
-
 import numpy as np
 import copy
+
+
 class StateTracker:
 
     def __init__(self):
@@ -33,16 +34,16 @@ class StateTracker:
         return copy.deepcopy(state)
 
     #输入是非空非数字的一行，得到对应的action {'speaker':, diaact:, inform_slots:, request_slots: nl:}
-    def get_action(self, list):
-        name = list[0]
-        nl = str(list[1])
-        action = rule_nlu.get_diaact(nl)
-        action['nl'] = nl
-        if name == 'customer_service':
-            action['speaker'] = 'agt'
-        elif name == 'client':
-            action['speaker'] = 'usr'
-        return action
+    # def get_action(self, list):
+    #     name = list[0]
+    #     nl = str(list[1])
+    #     action = rule_nlu.get_diaact(nl)
+    #     action['nl'] = nl
+    #     if name == 'customer_service':
+    #         action['speaker'] = 'agt'
+    #     elif name == 'client':
+    #         action['speaker'] = 'usr'
+    #     return action
 
     def dialog_history_dictionaries(self):
         """  Return the dictionary representation of the dialog history (includes values) """

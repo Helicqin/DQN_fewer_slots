@@ -82,29 +82,29 @@ class UserSimulator:
         self.dialog.append(diaact)
 
 
-dialog = {}
-dialog_num = 5000
-for i in range(dialog_num):
-    dm = DM()
-    user = UserSimulator(random.randint(0, 2))
-    print("goal:", user.goal)
-    user_diaact = {"diaact": "inform", "request_slots": {}, "inform_slots": {"user_goal": "预约"}}
-    while True:
-        if user_diaact["diaact"] == "bye":
-            user.store_diaact(user_diaact, 'user')
-            # print("user_diaact: ", user_diaact)
-            break
-        user.store_diaact(user_diaact, 'user')
-        # print("user_diaact: ", user_diaact)
-        agent_diaact = dm.agent_response_with_diaact(user_diaact)
-        # print("agent_diaact: ", agent_diaact)
-        user.store_diaact(agent_diaact, 'agent')
-        user_diaact = user.user_response(agent_diaact)
-    print("dialog {}:".format(i), user.dialog)
-    dialog[str(i)] = user.dialog
-
-with open("simulated_dialog_5000.json", 'w', encoding='utf-8') as f:
-    json.dump(dialog, f, ensure_ascii=False)
+# dialog = {}
+# dialog_num = 5000
+# for i in range(dialog_num):
+#     dm = DM()
+#     user = UserSimulator(random.randint(0, 2))
+#     print("goal:", user.goal)
+#     user_diaact = {"diaact": "inform", "request_slots": {}, "inform_slots": {"user_goal": "预约"}}
+#     while True:
+#         if user_diaact["diaact"] == "bye":
+#             user.store_diaact(user_diaact, 'user')
+#             # print("user_diaact: ", user_diaact)
+#             break
+#         user.store_diaact(user_diaact, 'user')
+#         # print("user_diaact: ", user_diaact)
+#         agent_diaact = dm.agent_response_with_diaact(user_diaact)
+#         # print("agent_diaact: ", agent_diaact)
+#         user.store_diaact(agent_diaact, 'agent')
+#         user_diaact = user.user_response(agent_diaact)
+#     print("dialog {}:".format(i), user.dialog)
+#     dialog[str(i)] = user.dialog
+#
+# with open("simulated_dialog_5000.json", 'w', encoding='utf-8') as f:
+#     json.dump(dialog, f, ensure_ascii=False)
 
 
 
