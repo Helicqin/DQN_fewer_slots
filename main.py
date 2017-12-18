@@ -13,7 +13,7 @@ params = {
 }
 
 state_tracker = StateTracker()
-usersim = UserSimulator(3)
+usersim = UserSimulator(1)
 agent = AgentDQN(params)
 
 
